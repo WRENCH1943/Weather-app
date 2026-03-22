@@ -1,70 +1,129 @@
-# GitHub Codespaces ♥️ React
+# 🌦️ STRATOS — Weather & Air Quality Dashboard
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+A modern, interactive weather dashboard built with **React** that provides real-time weather, air quality insights, and historical trends with beautiful charts.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+---
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+## 🚀 Features
 
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+### 🌍 Location Detection
 
-## Available Scripts
+* Auto-detects user location using geolocation
+* Search any city worldwide
 
-In the project directory, you can run:
+### 🌤️ Current Weather (Page 1)
 
-### `npm start`
+* Temperature, humidity, wind, UV index
+* Sunrise & sunset (IST)
+* Hourly breakdown charts:
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
+  * Temperature
+  * Humidity
+  * Precipitation
+  * Visibility
+  * Wind speed
 
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
+### 🌫️ Air Quality
 
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
+* Real-time AQI data
+* PM2.5, PM10, CO, NO₂, SO₂
+* Clean visual cards + charts
 
-### `npm test`
+### 📊 Historical Analytics (Page 2)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Temperature trends (mean, max, min)
+* Sunrise & sunset cycles
+* Precipitation analysis
+* Wind patterns + direction
+* Air quality trends over time
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* ⚛️ React (Hooks)
+* 📊 Recharts (Data visualization)
+* 🌐 Open-Meteo API (Weather + AQI)
+* 🎨 Custom CSS (Glassmorphism UI)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-## Learn More
+## 📁 Project Structure
 
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
+```
+src/
+ ├── App.jsx
+ ├── api.jsx
+ ├── components/
+ │    ├── charts.jsx
+ │    └── shared.jsx
+ ├── pages/
+ │    ├── Page1.jsx
+ │    └── Page2.jsx
+ └── style.jsx
+```
 
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚡ Getting Started
 
-### Code Splitting
+### 1. Clone the repo
 
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
+```bash
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
+```
 
-### Analyzing the Bundle Size
+### 2. Install dependencies
 
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
+```bash
+npm install
+```
 
-### Making a Progressive Web App
+### 3. Run the app
 
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
+```bash
+npm run start
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
+## 🌐 APIs Used
 
-### Deployment
+* Open-Meteo Weather API
+* Open-Meteo Air Quality API
+* OpenStreetMap Reverse Geocoding
 
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
+---
 
-### Troubleshooting
+## 🎯 Key Learnings
 
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+* Modular React architecture
+* Handling async API data
+* Debugging import/export issues
+* Building reusable components
+* Data transformation for charts
+
+---
+
+## 🧠 Future Improvements
+
+* 🌙 Dark/Light mode toggle
+* 📱 Mobile responsiveness improvements
+* 🔔 Weather alerts
+* 📍 Save favorite locations
+* 🚀 Deployment (Vercel/Netlify)
+
+---
+
+## 👨‍💻 Author
+
+**Deepak Kumar Sahu**
+
+---
+
+## ⭐ Show your support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
