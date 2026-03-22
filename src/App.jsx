@@ -1,29 +1,25 @@
-import './App.css';
+import {STYLES} from "./style.jsx";
+import { useState } from "react";
+import { Page1 } from "./pages/Page1.jsx";
+import { Page2 } from "./pages/Page2.jsx";
 
-function App() {
+export default function App() {
+  const [page, setPage] = useState(1);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+      <style>{STYLES}</style>
+      <div className="app-bg">
+        <nav className="top-nav">
+          <div className="nav-brand"><span className="brand-icon">◉</span>STRATOS</div>
+          <div className="nav-tabs">
+            <button className={`nav-tab ${page===1?"active":""}`} onClick={()=>setPage(1)}>Now &amp; Hourly</button>
+            <button className={`nav-tab ${page===2?"active":""}`} onClick={()=>setPage(2)}>Historical</button>
+          </div>
+        </nav>
+        <div className="page-content">
+          {page===1 ? <Page1/> : <Page2/>}
+        </div>
+      </div>
+    </>
   );
 }
-
-export default App;
